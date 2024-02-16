@@ -3,6 +3,7 @@ description: >-
   Expose your home assistant using a reverse SSH Tunnel.
 version: "1.0.0"
 slug: "ssh_reverse_tunnel"
+url: "https://github.com/echoes341/homeassistant-addons/tree/main/ssh_reverse_tunnel"
 init: false
 arch:
   - aarch64

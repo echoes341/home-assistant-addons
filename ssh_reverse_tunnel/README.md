@@ -6,7 +6,7 @@
 ![Supports armv7 Architecture][armv7-shield]
 ![Supports i386 Architecture][i386-shield]
 
-This is a Home Assistant addon to share on the internet a Home Assistant server on the internet using an SSH reverse tunnel.
+ThisHome Assistant addon allows to share on the internet a Home Assistant server using an SSH reverse tunnel.
 
 ## Prerequisites
 In order to do it you need:
