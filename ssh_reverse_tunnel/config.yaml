@@ -1,0 +1,27 @@
+name: "SSH Reverse Tunnel"
+description: >-
+  Expose your home assistant using a reverse SSH Tunnel.
+version: "1.0.0"
+slug: "ssh_reverse_tunnel"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+host_network: true
+options:
+  remote_ip: "127.0.0.1"
+  remote_port: "18123"
+  local_port: "8123"
+  target: null
+  private_key_b64: null
+  known_hosts_b64: ""
+schema:
+  remote_ip: "str"
+  remote_port: "str"
+  local_port: "str"
+  target: "str"
+  private_key_b64: "str"
+  known_hosts_b64: "str?"
