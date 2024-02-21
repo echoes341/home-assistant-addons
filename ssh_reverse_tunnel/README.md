@@ -23,6 +23,7 @@ The addon currently accepts the following settings, defaults in square brackets:
 - `remote_ip` [127.0.0.1] : The IP where that tunnel will be in the remote machine. This doesn't need to be the remote ip of the machine. For example, setting it to 127.0.0.1 means that the tunnel will be reachable only by connections coming from the virtual machine. This makes sense if you want the internet to be able to access home assistant using a reverse proxy. 
 - `remote_port` [18123]: Port where the tunnel will be allocated on the remote machine.
 - `local_port` [8123]: Local port to forward through the remove machine. Home Assistant usually is on 8123.
+- `monitoring_port` [20000]: specifies the base monitoring port to use. Used to recover ssh connection if it dies.
 - `target`: SSH target for the remote connection, for example `myuser@your-domain.com`
 - `private_key_b64`: Base64 encode private key to use for connecting. The remote machine must have the relative public key set into its `~/.ssh/authorized_keys` 
 - `known_hosts_b64`: (optional, but recommended) Base64 encoded `known_hosts` file containing the server public key to validate the ssh connection.
