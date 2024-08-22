@@ -6,7 +6,6 @@ set -o pipefail
 REMOTE_IP=$(bashio::config 'remote_ip')
 REMOTE_PORT=$(bashio::config 'remote_port')
 LOCAL_PORT=$(bashio::config 'local_port')
-MONITORING_PORT=$(bashio::config 'monitoring_port')
 TARGET=$(bashio::config 'target')
 key_b64=$(bashio::config 'private_key_b64')
 known_hosts_b64=$(bashio::config 'known_hosts_b64')
@@ -25,8 +24,9 @@ if [ -n "$known_hosts_b64" ]; then
 fi
 
 bashio::log.info "Starting tunnel"
-autossh -M ${MONITORING_PORT} -i ~/.ssh/key -NT \
+autossh -M 0 -q -i ~/.ssh/key -NT \
     -o ServerAliveInterval=60 \
+    -o ServerAliveCountMax=3 \
     -o PasswordAuthentication=no \
     -o StrictHostKeyChecking=${strict_host_key_checking} \
     -o ExitOnForwardFailure=yes \
